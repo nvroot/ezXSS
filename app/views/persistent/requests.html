@@ -33,7 +33,7 @@
                                             <th width="1%">ID</th>
                                             <th>URL</th>
                                             <th width="1%">Browser</th>
-                                            <th width="1%">IP Address</th>
+                                            <th>IP Address</th>
                                             <th width="1%">Triggered</th>
                                         </tr>
                                     </thead>
@@ -46,18 +46,16 @@
                                                 </a>
                                             </td>
                                             <td>
-                                                <code class="url-display">{request->shorturi}</code>
+                                                {request->shorturi}
                                             </td>
                                             <td>
-                                                <span class="browser-display">{request->browser}</span>
+                                                {request->browser}
                                             </td>
                                             <td>
-                                                <span class="ip-display">{request->ip}</span>
+                                                {request->ip}
                                             </td>
                                             <td data-sort="{request->time}">
-                                                <span class="timestamp-display">
-                                                    <time class="time-formatted">{request->last}</time>
-                                                </span>
+                                                <time class="time-formatted">{request->last}</time>
                                             </td>
                                         </tr>
                                         {%/foreach}
